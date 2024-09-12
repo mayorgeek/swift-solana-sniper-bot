@@ -9,15 +9,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Load environment variables
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const SOLANA_NETWORK = process.env.SOLANA_NETWORK || 'mainnet-beta';
-const SOLANA_RPC_URL = process.env.SOLANA_RPC_URL || clusterApiUrl(SOLANA_NETWORK);
+const BOT_TOKEN = '7282557744:AAGsP17ft-rU9kh0mDwR_ckuiSi7RRTmgLw';
+const SOLANA_NETWORK = 'mainnet-beta';
+const SOLANA_RPC_URL = 'https://solana-mainnet.g.alchemy.com/v2/QLDgrip-lUlxmAJnEMbNlgEB8-FvhIss';
 // let TARGET_MINT_ADDRESS = process.env.TARGET_MINT_ADDRESS;
 let TARGET_MINT_ADDRESS = '';
-let BUY_PRICE_THRESHOLD = parseFloat(process.env.BUY_PRICE_THRESHOLD || '5');
+let BUY_PRICE_THRESHOLD = '0.1';
 
 // Private key (base58 encoded) provided by the user
-let PRIVATE_KEY = process.env.SNIPER_PRIVATE_KEY;
+let PRIVATE_KEY = '41DP6aJYvWbaTFEwyyHzpA4iNKmVTKpkMpN8hWiukpZuMCWFpVqAQXX87i4BFDDsk9z5MkiUKetJYqmLhwf6F83r';
 
 // Decode the private key from base58 and create a Keypair
 let sniperKeyPair = Keypair.fromSecretKey(bs58.decode(PRIVATE_KEY));
